@@ -41,7 +41,6 @@ const Home = () => {
                     }
                 </tbody>
             </table>
-            <button className="btn btn-primary">Hello</button>
         </div>
         </>
     )

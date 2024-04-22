@@ -10,3 +10,16 @@
     width:500px;
     border: 2px solid black;
 }
+
+.detailsContainer {
+    width:700px;
+    margin:0 auto;
+    border: 2px solid green;
+    padding: 20px;
+    margin-top:30px;
+}
+
+.card {
+    padding:10px;
+    margin-bottom:10px;
+}
