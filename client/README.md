@@ -1,8 +1,15 @@
-# React + Vite
+#What's for Dinner?
+Recipe database to determine what to make for dinner.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+To run, make sure that all the following are installed:
+- react router dom
+- nodemon
+- axios
+- mongoose
+- cors
+- dotenv
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Run:
+in cd client: npm run dev
+in cd server: npm run dev
