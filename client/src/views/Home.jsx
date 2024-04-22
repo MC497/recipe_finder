@@ -18,9 +18,9 @@ const Home = () => {
 
     return (
         <>
-        <div>
-            <h1>Recipes Home</h1>
-            <table>
+        <div className="main-content">
+            <h1 className="my-4">Recipes Home</h1>
+            <table className="recipe-table">
                 <thead>
                     <tr>
                         <th>Title</th>
@@ -41,6 +41,7 @@ const Home = () => {
                     }
                 </tbody>
             </table>
+            <button className="btn btn-primary">Hello</button>
         </div>
         </>
     )
