@@ -20,6 +20,7 @@ const Home = () => {
         <>
         <div className="main-content">
             <h1 className="my-4">Recipes Home</h1>
+            <Link to="/recipes/create" className="btn btn-info">Create a new recipe</Link>
             <table className="recipe-table">
                 <thead>
                     <tr>

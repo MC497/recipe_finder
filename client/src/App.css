@@ -9,6 +9,7 @@
 .recipe-table {
     width:500px;
     border: 2px solid black;
+    margin-top:20px;
 }
 
 .detailsContainer {
@@ -22,4 +23,18 @@
 .card {
     padding:10px;
     margin-bottom:10px;
+}
+
+.recipe-form {
+    width:600px;
+    border: 2px solid gold;
+    align-items: center;
+    padding:10px;
+    margin:0 auto;
+    margin-top:30px;
+}
+
+.form-items {
+    display:flex;
+    flex-direction: column;
 }
