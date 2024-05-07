@@ -38,3 +38,8 @@
     display:flex;
     flex-direction: column;
 }
+
+.recipe-page-buttons {
+    display:flex;
+    justify-content: space-between;
+}

@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import axios from "axios";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+
 
 const RecipeDetails = () => {
 
@@ -9,6 +10,7 @@ const RecipeDetails = () => {
 
     const {id} = useParams();
 
+// importing in the actual recipe
     useEffect(() => {
         axios.get(`http://localhost:9999/api/recipes/${id}`)
             .then((res) => {
@@ -20,6 +22,7 @@ const RecipeDetails = () => {
             })
     },[id])
 
+//Creating the lists of ingredients and steps and giving them bullets
     const makeIngredientList = (importIngrList) => {
         // console.log(importIngrList);
         const ingrList_fin=[];
@@ -36,6 +39,17 @@ const RecipeDetails = () => {
             }
             return stepList_fin;
             }
+
+//Deleting Function        
+        const navigate = useNavigate();
+
+        const deleteRecipe = () => {
+            axios.delete(`http://localhost:9999/api/recipes/${id}`)
+            .then((res)=> {
+                console.log(res.data);
+                navigate("/");
+            })
+        }
 
     return (
         <>
@@ -54,7 +68,10 @@ const RecipeDetails = () => {
                 <ol>{recipe.steps && makeStepList(recipe.steps)}</ol>
             </div>
             
-            <Link to="/" className="btn btn-primary">Back to Main Page</Link>
+            <div className="recipe-page-buttons">
+                <Link to="/" className="btn btn-primary">Back to Main Page</Link>
+                <button className="btn btn-danger" onClick={deleteRecipe}>Delete this recipe</button>
+            </div>
         </div>
         </>
     )
