@@ -11,5 +11,6 @@ To run, make sure that all the following are installed:
 - dotenv
 
 Run:
-in cd client: npm run dev
-in cd server: npm run dev
+
+in cd client: ```npm run dev```
+in cd server: ```npm run dev```
